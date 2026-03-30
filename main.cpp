@@ -12,7 +12,11 @@ int main(){
     std::cin>>b;
 
     std::cout<<(a > b)<<std::endl;
-    std::cout<<(a >= b)<<std::endl;
+    std::cout<<(a >= b)<<std::endl; //comparação de variáveis
+    std::cout<<(a != b)<<std::endl;
+    std::cout<<(a == b)<<std::endl;
+    std::cout<<(a < b)<<std::endl;
+    std::cout<<(a <= b)<<std::endl;
 
 
     return 0;
