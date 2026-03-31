@@ -3,10 +3,10 @@
 int main(){
 
    
-    int a = 8;
-    int b = 3;
+    int a = 10;
 
-    std::cout<<(a % b)<<std::endl; // vai sobrar o restante ex. 8 / 3 = 2 e vai sobrar mais 2
-
+    std::cout<<(++a)<<std::endl;
+    std::cout<<(--a)<<std::endl;
+    
     return 0;
 }
