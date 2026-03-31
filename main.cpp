@@ -4,10 +4,9 @@ int main(){
 
    
     int a = 10;
+    int b = 6;
 
-    a += 5; // a = a + 5
+    std::cout<<((a > b) && (a + b) >= 16)<<std::endl;
 
-    std::cout<<a<<std::endl;
-    
     return 0;
 }
