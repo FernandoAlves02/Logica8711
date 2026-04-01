@@ -2,11 +2,9 @@
 
 int main(){
 
-    bool condicao = true;
-    bool condicao1 = false;
-
-    std::cout<<condicao<<std::endl;
-    std::cout<<condicao1<<std::endl;
+    char letra = 'E'; // char vai guardar somente 1 caractere, sendo 1 bytes somente
+    
+    std::cout<<letra<<std::endl;
 
     return 0;
 }
