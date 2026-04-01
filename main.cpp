@@ -1,16 +1,24 @@
 #include<iostream>
+#include<string>
+#include<windows.h>
 
 int main(){
 
-    auto num1 = 10;
-    auto num2 = 15.80f;
-    auto letra = 'F';
-    auto texto = "Fernando";
+    SetConsoleOutputCP(CP_UTF8);
+    SetConsoleCP(CP_UTF8);
 
-    std::cout<<num1<<std::endl;
-    std::cout<<num2<<std::endl;
-    std::cout<<letra<<std::endl;
-    std::cout<<texto<<std::endl;
+    std::string nome;
+    int idade;
+    int anoAtual = 2026;
+
+    std::cout<<"Boa noite, qual o seu nome?"<<std::endl;
+    std::cin>>nome;
+
+    std::cout<<"E a sua idade?"<<std::endl;
+    std::cin>>idade;
+    int anoNascido = 2026 - idade;
+
+    std::cout<<"Seja bem vindo "<<nome<<", você nasceu no ano de "<<anoNascido<<std::endl;
 
     return 0;
 }
