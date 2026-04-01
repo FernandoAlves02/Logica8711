@@ -18,7 +18,7 @@ int main(){
     std::cin>>idade;
     int anoNascido = anoAtual - idade;
 
-    std::cout<<"Seja bem vindo "<<nome<<", você nasceu no ano de "<<anoNascido<<std::endl;
+    std::cout<<"Seja bem vindo "<<nome<<", você nasceu no ano de "<<anoNascido<<"."<<std::endl;
 
     return 0;
 }   
