@@ -16,9 +16,9 @@ int main(){
 
     std::cout<<"E a sua idade?"<<std::endl;
     std::cin>>idade;
-    int anoNascido = 2026 - idade;
+    int anoNascido = anoAtual - idade;
 
     std::cout<<"Seja bem vindo "<<nome<<", você nasceu no ano de "<<anoNascido<<std::endl;
 
     return 0;
-}
+}   
