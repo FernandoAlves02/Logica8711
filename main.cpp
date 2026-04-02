@@ -1,5 +1,4 @@
 #include<iostream>
-#include<string>
 #include<windows.h>
 
 int main(){
@@ -7,18 +6,13 @@ int main(){
     SetConsoleOutputCP(CP_UTF8);
     SetConsoleCP(CP_UTF8);
 
-    std::string nome;
-    int idade;
-    int anoAtual = 2026;
+    int result1 = 4 + 4 * 2;
+    int result2 = 4 + 2 / 2;
+    int result3 = (4 + 4) * 2;
 
-    std::cout<<"Boa noite, qual o seu nome?"<<std::endl;
-    std::cin>>nome;
-
-    std::cout<<"E a sua idade?"<<std::endl;
-    std::cin>>idade;
-    int anoNascido = anoAtual - idade;
-
-    std::cout<<"Seja bem vindo "<<nome<<", você nasceu no ano de "<<anoNascido<<"."<<std::endl;
+    std::cout<<result1<<std::endl;
+    std::cout<<result2<<std::endl;
+    std::cout<<result3<<std::endl;
 
     return 0;
-}   
+}
