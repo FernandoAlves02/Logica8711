@@ -7,10 +7,13 @@ int main(){
     SetConsoleOutputCP(CP_UTF8);
     SetConsoleCP(CP_UTF8);
 
-    std::string nome = "Fernando";
-    std::string sobrenome = "Alves";
+    std::string nome;
+    std::string sobrenome = " Alves";
 
-    std::cout<<nome + " " + sobrenome<<std::endl;
+    std::cout<<"Digite seu nome: "<<std::endl;
+    std::cin>>nome;
+
+    std::cout<<nome.append(sobrenome);
 
     return 0;
 }
