@@ -8,15 +8,9 @@ int main(){
     SetConsoleOutputCP(CP_UTF8);
     SetConsoleCP(CP_UTF8);
 
-    int a = 5;
-    int b = 3;
-    int c = 5;
-    int d = 2;
-
-    int maior1 = std::max(a, b);
-    int maior2 = std::max(c, b);
-
-    std::cout<<(maior1 > maior2)<<std::endl;
+    std::cout<<std::sqrt(64)<<std::endl;
+    std::cout<<std::round(2.6)<<std::endl;
+    std::cout<<std::log(2)<<std::endl;
 
     return 0;
 }
