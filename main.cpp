@@ -29,8 +29,10 @@ int main(){
         std::cout<<"Seja muito bem-vindo "<<nome<<", já finalizamos o seu cadastro, com base na sua altura e idade registradas, você foi selecionado para a turma Infantil!"<<std::endl;
     }else if(idade <= 18){
         std::cout<<"Seja muito bem-vindo "<<nome<<", já finalizamos o seu cadastro, com base na sua altura e idade registradas, você foi selecionado para a turma Adolescente!"<<std::endl;
-    }else{
+    }else if(idade <= 60){
         std::cout<<"Seja muito bem-vindo "<<nome<<", já finalizamos o seu cadastro, com base na sua altura e idade registradas, você foi selecionado para a turma Adulta!"<<std::endl;
+    }else{
+        std::cout<<"Seja muito bem-vindo "<<nome<<", já finalizamos o seu cadastro, com base na sua altura e idade registradas, você foi selecionado para participar dos nosso chás da tarde com os demais Sêniors"<<std::endl;
     }
 
     return 0;
