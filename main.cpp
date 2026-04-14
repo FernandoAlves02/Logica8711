@@ -7,34 +7,31 @@ int main(){
     SetConsoleOutputCP(CP_UTF8);
     SetConsoleCP(CP_UTF8);
 
-    int opcaoPagamento;
-    int qtdParafuso;
-    float valorParafuso = 1.40;
-    float valorTotalParafuso;
-    float desconto;
+    //algoritmo que solicite o nome, altura, idade
+    //a idade, iremos classificar <=10 Infantil, <=18 = Adolescente, <= 60 Adulto
 
-    std::cout<<"Digite a quantidade de parafusos desejada: "<<std::endl;
-    std::cin>>qtdParafuso;
+    std::string nome;
+    float altura;
+    int idade;
 
-    valorTotalParafuso = qtdParafuso * valorParafuso;
+    std::cout<<"Olá, para prosseguir com seu cadastro na Instituição Swim de Aulas de Natação, por gentileza, insira o seu primeiro nome: "<<std::endl;
+    std::cin>>nome;
 
-    std::cout<<"Qual a forma de pagamento: "<<std::endl;
-    std::cout<<"--- 1 - Pix"<<std::endl;
-    std::cout<<"--- 2 - Dinheiro"<<std::endl;
-    std::cout<<"--- 3 - Cartão"<<std::endl;
-    std::cin>>opcaoPagamento;
+    std::cout<<nome<<" por favor, vamos precisa da sua altura agora: "<<std::endl;
+    std::cin>>altura;
 
-    if(opcaoPagamento == 1){
-        std::cout<<"Sua compra ficou no valor total de R$ "<<valorTotalParafuso<<std::endl;
-    }else if(opcaoPagamento == 2){
-        valorTotalParafuso = valorTotalParafuso * 0.9;
-        std::cout<<"Sua compra ficou no valor total de R$ "<<valorTotalParafuso<<std::endl;
-    }else if(opcaoPagamento == 3){
-        std::cout<<"Sua compra ficou no valor total de R$ "<<valorTotalParafuso<<std::endl;
+    std::cout<<"Para finalizar o seu cadastro, vamos precisar da sua idade: "<<std::endl;
+    std::cin>>idade;
+
+    if(idade < 0){
+        std::cout<<"Idade incorreta!"<<std::endl;
+    }else if(idade <= 10){
+        std::cout<<"Seja muito bem-vindo "<<nome<<", já finalizamos o seu cadastro, com base na sua altura e idade registradas, você foi selecionado para a turma Infantil!"<<std::endl;
+    }else if(idade <= 18){
+        std::cout<<"Seja muito bem-vindo "<<nome<<", já finalizamos o seu cadastro, com base na sua altura e idade registradas, você foi selecionado para a turma Adolescente!"<<std::endl;
     }else{
-        std::cout<<"Opção de compra inválida"<<std::endl;
+        std::cout<<"Seja muito bem-vindo "<<nome<<", já finalizamos o seu cadastro, com base na sua altura e idade registradas, você foi selecionado para a turma Adulta!"<<std::endl;
     }
-    
 
     return 0;
 }
