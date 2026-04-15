@@ -8,9 +8,15 @@ int main(){
     SetConsoleOutputCP(CP_UTF8);
     SetConsoleCP(CP_UTF8);
 
-    for(int i = 10; i >= 0; i--){
-        std::this_thread::sleep_for(std::chrono::milliseconds(500));
-        std::cout<<"A bomba irá explodir em.."<<i<<std::endl;
+    for(int i = 0; i <= 10; i++){
+        for(int j = 0; j <= 10; j++){
+            int tabuada = j;
+            if(j == 0){
+                std::cout<<"Abaixo, temos a tabuada do "<<i<<":"<<std::endl;
+            }
+            std::cout<<"O resultado de "<<tabuada<<" x "<<i<<" = "<<i*tabuada<<std::endl;
+            
+        }
     }
 
     
