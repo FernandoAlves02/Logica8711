@@ -10,8 +10,8 @@ int main(){
     //algoritmo que solicite o nome, altura, idade
     //a idade, iremos classificar <=10 Infantil, <=18 = Adolescente, <= 60 Adulto
 
-    for(int i = 1; i <= 10; i++){
-        std::cout<<i<<std::endl;
+    for(int i = 10; i >= 0; i--){
+        std::cout<<"A bomba irá explodir em.."<<i<<std::endl;
     }
 
     return 0;
