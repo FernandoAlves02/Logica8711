@@ -14,14 +14,14 @@ int main(){
     //     }
     // }
 
-    int i = 10;
-    int x = i++;
-
-    int j = 10;
-    int y = ++j;
-
-    std::cout<<x<<std::endl;
-    std::cout<<y<<std::endl;
+    for(int i = 0; i <= 10; i++){
+        std::cout<<"Abaixo, temos a tabuada do "<<i<<":"<<std::endl;
+        for(int j = 0; j <= 10; j++){
+            int tabuada = j;
+            std::cout<<"O resultado de "<<tabuada<<" x "<<i<<" = "<<i*tabuada<<std::endl;
+            
+        }
+    }
 
     return 0;
 }
