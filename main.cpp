@@ -6,21 +6,13 @@ int main(){
     SetConsoleOutputCP(CP_UTF8);
     SetConsoleCP(CP_UTF8);
 
-    int soma = 0;
+    for(int i = 1; i <= 2; ++i){
+        std::cout<<"Externo: "<<i<<std::endl;
 
-    for(int i = 1; i <= 5; i++){
-        soma += i;
+        for(int j = 1; j <= 3; ++j){
+            std::cout<<"Interno: "<<j<<std::endl;
+        }
     }
-
-
-    // soma = soma + i
-    // 0    = 0    + 1
-    // 1    = 1    + 2
-    // 3    = 3    + 3
-    // 6    = 6    + 4
-    // 10   = 10   + 5
-
-    std::cout<<"Soma é: "<<soma<<std::endl;
 
     return 0;
 }
