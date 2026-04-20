@@ -7,15 +7,14 @@ int main(){
     SetConsoleOutputCP(CP_UTF8);
     SetConsoleCP(CP_UTF8);
 
-    std::string carros[5] = {"Volvo", "BMW", "Ford", "Chevrolet", "Fiat"};
-    int tamanho = sizeof(carros) / sizeof(carros[0]); //tamanho deve voltar 5 que é o tamanho do array, sizeof retorna bytes
+    int numeros[3];
+    numeros[0] = 10;
+    numeros[1] = 20;
+    numeros[2] = 30;
     
-    std::cout<<tamanho<<std::endl;
-
-    for(int i = 0; i < std::size(carros); i++){
-        std::cout<<carros[i]<<std::endl;
+    for(int i = 0; i < std::size(numeros); i++){
+        std::cout<<numeros[i]<<std::endl;
     }
-
 
 
     return 0;
