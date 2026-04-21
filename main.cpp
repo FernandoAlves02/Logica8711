@@ -7,12 +7,14 @@ int main(){
     SetConsoleOutputCP(CP_UTF8);
     SetConsoleCP(CP_UTF8);
 
-    std::string letras[2][4] = { //primeiro linha, depois, coluna
-        {"A", "B", "C", "D"},
-        {"E", "F", "G", "H"}
-    };
+    int contagem = 10;
 
-    std::cout<<letras[1][1]<<std::endl;
+    while(contagem > 0){
+        std::cout<<contagem<<std::endl;
+        contagem--;
+    }
+
+    std::cout<<"Feliz ano novo!!"<<std::endl;
 
     return 0;
 }
