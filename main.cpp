@@ -1,8 +1,12 @@
 #include<iostream>
 #include<windows.h>
 
-void myFunction(){
-    std::cout<<"Olá mundo!"<<std::endl;
+void verificarAprovacao(float nota){
+    if(nota >= 7){
+        std::cout<<"Status: Aprovado!"<<std::endl;
+    }else{
+        std::cout<<"Status: Reprovado!"<<std::endl;
+    }
 }
 
 int main(){
@@ -10,7 +14,9 @@ int main(){
     SetConsoleOutputCP(CP_UTF8);
     SetConsoleCP(CP_UTF8);
 
-    myFunction();
+    float minhaNota = 8.5;
+
+    verificarAprovacao(minhaNota);
 
     return 0;
 }
