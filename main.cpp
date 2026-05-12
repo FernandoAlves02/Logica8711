@@ -1,5 +1,4 @@
 #include<iostream>
-#include<string>
 #include<windows.h>
 
 int main(){
@@ -7,12 +6,24 @@ int main(){
     SetConsoleOutputCP(CP_UTF8);
     SetConsoleCP(CP_UTF8);
 
-    std::string nomeCompleto;
+    int num1, num2, soma, subt, mult;
+    float div;
 
-    std::cout<<"Digite o nome completo do aluno: "<<std::endl;
-    std::getline(std::cin, nomeCompleto);
+    std::cout<<"Digite aqui o valor para o número 1: "<<std::endl;
+    std::cin>>num1;
 
-    std::cout<<nomeCompleto<<std::endl;
+    std::cout<<"DIgite aqui o valor para o número 2: "<<std::endl;
+    std::cin>>num2;
+
+    soma = num1 + num2;
+    subt = num1 - num2;
+    mult = num1 * num2;
+    div = num1 / num2;
+
+    std::cout<<"O resultado da soma é: "<<soma<<std::endl;
+    std::cout<<"O resultado da subtração é: "<<subt<<std::endl;
+    std::cout<<"O resultado da multiplicação é: "<<mult<<std::endl;
+    std::cout<<"O resultado da divisão é: "<<div<<std::endl;
 
 
     return 0;
