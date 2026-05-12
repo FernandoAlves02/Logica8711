@@ -14,7 +14,12 @@ float multiplicar(float a, float b){
 }
 
 float dividir(float a, float b){
-    return a / b;
+    if(b == 0){
+        std::cout<<"Não é possível dividir por 0!"<<std::endl;
+        return 0;
+    }else{
+        return a / b;
+    }
 }
 
 void coletarNumeros(float &a, float &b){
