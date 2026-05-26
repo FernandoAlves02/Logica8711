@@ -1,14 +1,29 @@
 #include<iostream>
 #include<windows.h>
 
-int quadrado(int num){
+void imprimirAteN(int num){
+    if(num == 0){
+        std::cout<<"0! Finalizado! (Da próxima vez, tente um número maior para ficar mais legal)"<<std::endl;
+    }else if(num > 0){
+        for(int i = 0; i <= num; i++){
+            
+            if(i == num){
+                std::cout<<i<<" chegamos no seu número! Obrigado por utilizar o nosso script!"<<std::endl;
+            }else{
+                std::cout<<i<<std::endl;
+            }
 
-    return num * num;
-}
+        };
+    }else if(num < 0){
+        for(int i = 0; i >= num; i--){
 
-int cubo(int num){
-
-    return num * num * num;
+            if(i == num){
+                std::cout<<i<<" chegamos no seu número! Obrigado por utilizar o nosso script!"<<std::endl;
+            }else{
+                std::cout<<i<<std::endl;
+            }
+        };
+    };
 }
 
 int main(){
@@ -16,9 +31,13 @@ int main(){
     SetConsoleOutputCP(CP_UTF8);
     SetConsoleCP(CP_UTF8);
 
-    std::cout<<"Quadrado de 5: "<<quadrado(5)<<". Cubo de 5: "<<cubo(5)<<std::endl;
-    std::cout<<"Quadrado de 8: "<<quadrado(8)<<". Cubo de 8: "<<cubo(8)<<std::endl;
-    std::cout<<"Quadrado de 10: "<<quadrado(10)<<". Cubo de 10: "<<cubo(10)<<std::endl;
+    int num;
+
+    std::cout<<"----- Bem vindo ao nosso mais famoso script, Contamos Para Você!! -----"<<std::endl;
+    std::cout<<"Digite um número que contaremos do zero até chegar nele!"<<std::endl;
+    std::cin>>num;
+
+    imprimirAteN(num);
 
     return 0;
 }
