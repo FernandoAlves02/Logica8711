@@ -1,23 +1,19 @@
 #include<iostream>
 #include<windows.h>
 
+int fibonacci(int n){
+    if(n == 0) return 0;
+    if(n == 1) return 1;
+
+    return fibonacci(n - 1) + fibonacci(n - 2);
+}
+
 int main(){
 
     SetConsoleOutputCP(CP_UTF8);
     SetConsoleCP(CP_UTF8);
 
-    int fibonacci[10];
-
-    fibonacci[0] = 1;
-    fibonacci[1] = 1;
-
-    for(int i = 2; i < 10; i++){
-        fibonacci[i] = fibonacci [i - 1] + fibonacci[i - 2];
-    }
-
-    for(int i = 0; i < 10; i++){
-        std::cout<<fibonacci[i]<<"\n";
-    }
+    std::cout<<fibonacci(6)<<std::endl;
     
     return 0;
 }
