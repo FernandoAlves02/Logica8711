@@ -20,21 +20,14 @@ std::string limparString(std::string stringSuja){
     return stringLimpa;
 }
 
-bool ehPalindromo(std::string s){
-    
-    s = limparString(s);
-
-    int inicio = 0;
-    int fim = s.length() - 1;
-
-    while(inicio < fim){
-        if(s[inicio] != s[fim]){
-            return false;
-        }
-        inicio++;
-        fim--;
+bool ehPalindromo(std::string s, int inicio, int fim){
+    if(inicio >= fim){
+        return true;
     }
-    return true;
+    if(s[inicio] != s[fim]){
+        return false;
+    }
+    return ehPalindromo(s, inicio + 1, fim -1);
 }
 
 int main(){
@@ -49,8 +42,13 @@ int main(){
     std::getline(std::cin>>std::ws, palavra);
 
     std::cout<<"Verificando..."<<std::endl;
-    
-    if(ehPalindromo(palavra)){
+
+    for(char &c : palavra){
+        c = std::tolower(c);
+    }
+    std::cout<<palavra<<std::endl;
+
+    if(ehPalindromo(palavra, 0, palavra.length() - 1)){
         std::cout<<"Sim! "<<palavra<<" é um palíndromo!"<<std::endl;
     }else{
         std::cout<<"Infelizmente, "<<palavra<<" não é um palíndromo."<<std::endl;
