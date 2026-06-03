@@ -1,6 +1,7 @@
 #include<iostream>
 #include<windows.h>
 #include<string>
+#include<chrono>
 
 struct Aluno{
     std::string nome;
@@ -18,11 +19,21 @@ int main(){
     SetConsoleOutputCP(CP_UTF8);
     SetConsoleCP(CP_UTF8);
 
-    Aluno aluno = {"Paulo", 8.0, 9.5};
+    Aluno a1;
 
-    float media = calcularMedia(aluno);
+    std::cout<<"Bem vindo a nossa calculadora de média das suas notas!"<<std::endl;
+    std::cout<<"Por gentileza, quem gostaria de saber a sua media? (Insira o nome do Aluno): ";
+    std::cin>>a1.nome;
+    std::cout<<"Agora, por gentileza, a sua primeira nota: ";
+    std::cin>>a1.nota1;
+    std::cout<<"Por ultimo, vou precisa da sua segunda nota: ";
+    std::cin>>a1.nota2;
 
-    std::cout<<aluno.nome<<" - Média: "<<media<<std::endl;
+    std::cout<<"Calculado..."<<std::endl;
+    Sleep(3000);
+    float media = calcularMedia(a1);
+
+    std::cout<<a1.nome<<" - Média: "<<media<<std::endl;
 
     return 0;
 }
