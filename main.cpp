@@ -2,11 +2,15 @@
 #include<windows.h>
 #include<string>
 
-struct Pessoa{
+struct Aluno{
     std::string nome;
-    int idade;
-    float altura;
+    float nota1;
+    float nota2;
 };
+
+float calcularMedia(Aluno a){
+    return (a.nota1 + a.nota2) / 2;
+}
 
 
 int main(){
@@ -14,15 +18,11 @@ int main(){
     SetConsoleOutputCP(CP_UTF8);
     SetConsoleCP(CP_UTF8);
 
-    Pessoa p1;
+    Aluno aluno = {"Paulo", 8.0, 9.5};
 
-    p1.nome = "Fernando";
-    p1.idade = 24;
-    p1.altura = 1.83;
+    float media = calcularMedia(aluno);
 
-    std::cout<<"Nome: "<<p1.nome<<std::endl;
-    std::cout<<"Idade: "<<p1.idade<<std::endl;
-    std::cout<<"Altura: "<<p1.altura<<std::endl;
+    std::cout<<aluno.nome<<" - Média: "<<media<<std::endl;
 
     return 0;
 }
