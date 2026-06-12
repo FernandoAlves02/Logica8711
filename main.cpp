@@ -1,23 +1,24 @@
 #include<iostream>
 #include<windows.h>
 
-int encontrarMaior(int* arr, int tamanho){
-    int maior = arr[0];
-    for(int i = 1; i < tamanho; i++){
-        if(arr[i] > maior){
-            maior = arr[i];
-        }
+//algoritmo de horner
+
+int horner(int* coeficientes, int grau, int x){
+    int resultado = coeficientes[grau];
+    for(int i = grau - 1; i >= 0; i--){
+        resultado = resultado * x + coeficientes[i];
     }
-    return maior;
+    return resultado;
 }
+
 
 int main(){
 
     SetConsoleOutputCP(CP_UTF8);
     SetConsoleCP(CP_UTF8);
 
-    int arr[] = {3, 7, 2, 9, 1, 5};
-    std::cout<<"Maior elemento: "<<encontrarMaior(arr, 6)<<std::endl;
+    int coef[] = {5, 4, 3, 2};
+    std::cout<<"p(2) = "<<horner(coef, 3, 2)<<std::endl;
 
     return 0;
 }
