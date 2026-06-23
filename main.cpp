@@ -26,7 +26,7 @@ int main(){
     while(inicio < fim){
         std::cout<<"Removido: "<<fila[inicio]<<std::endl;
         inicio++;
-    };
+    }
     
     return 0;
 }
