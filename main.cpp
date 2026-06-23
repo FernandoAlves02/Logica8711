@@ -7,69 +7,26 @@ int main(){
     SetConsoleOutputCP(CP_UTF8);
     SetConsoleCP(CP_UTF8);
 
-    std::string palavra = "";
-    std::string advinhada = "";
+    int pilha[5];
+    int topo = -1;
+    int tamanho = 5;
 
-    std::cout<<"Escolha uma palavra para o próximo jogador: ";
-    std::cin>>palavra;
-    system("cls");
-
-    int erros = 0;
-    int maxErros = 6;
-    bool ganhou = false;
-
-    for(int i = 0; i < palavra.length(); i++){
-        advinhada += "_";
-    }
-
-    std::cout<<"===== JOGO DA FORCA ====="<<std::endl;
-    std::cout<<"Advinhe a palavra!"<<std::endl;
+    std::cout<<"===== PILHA ====="<<std::endl;
     std::cout<<std::endl;
 
-    while(erros < maxErros && !ganhou){
-        std::cout<<"Palavra: ";
-        for(int i = 0; i < advinhada.length(); i++){
-            std::cout<<advinhada[i]<<" ";
-        }
-        std::cout<<std::endl;
-        std::cout<<"Erros: "<<erros<<"/"<<maxErros<<std::endl;
-        std::cout<<std::endl;
+    pilha[0] = 10;
+    pilha[1] = 20;
+    pilha[2] = 30;
+    topo = 2;
 
-        char letra;
-        std::cout<<"Digite uma letra: ";
-        std::cin>>letra;
-        letra = std::tolower(letra);
+    std::cout<<"Elementos empilhados: 10, 20, 30"<<std::endl;
+    std::cout<<std::endl;
 
-        std::cout<<std::endl;
-
-        bool encontrou = false;
-
-        for(int i = 0; i < palavra.length(); i++){
-            if(palavra[i] == letra){
-                advinhada[i] = letra;
-                encontrou = true;
-            }
-        }
-        if(!encontrou){
-            std::cout<<"Letra errada!"<<std::endl;
-            erros++;
-        }else{
-            std::cout<<"Letra encontrada!"<<std::endl;
-        }
-        std::cout<<std::endl;
-
-        if(advinhada == palavra){
-            ganhou = true;
-        }
+    std::cout<<"Desempilhando.."<<std::endl;
+    while(topo >= 0){
+        std::cout<<"Removida: "<<pilha[topo]<<std::endl;
+        topo--;
     }
-    std::cout<<"=========="<<std::endl;
-    if(ganhou){
-        std::cout<<"Parabéns! Você venceu!"<<std::endl;
-        std::cout<<"A palavra era: "<<palavra<<std::endl;
-    }else{
-        std::cout<<"Game over! Você perdeu!"<<std::endl;
-        std::cout<<"A palavra era: "<<palavra<<std::endl;
-    }
-
+    
     return 0;
 }
