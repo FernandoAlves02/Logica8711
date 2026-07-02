@@ -24,7 +24,7 @@ int main(){
 
     std::cout<<"Elemento na posição 0: "<<numeros[0]<<std::endl;
     std::cout<<"Elemento na posição 2: "<<numeros[2]<<std::endl;
-    std::cout<<"Último elemento: "<<numeros[3]<<std::endl;
+    std::cout<<"Último elemento: "<<numeros[numeros.size() - 1]<<std::endl;
 
     return 0;
 }
