@@ -9,22 +9,25 @@ int main(){
 
     std::vector<int>numeros;
 
-    std::cout<<"===== Acessar elemento ====="<<std::endl;
+    std::cout<<"===== Remover elemento específico ====="<<std::endl;
 
-    numeros.push_back(100);
-    numeros.push_back(200);
-    numeros.push_back(300);
-    numeros.push_back(400);
+    numeros.push_back(10);
+    numeros.push_back(20);
+    numeros.push_back(30);
+    numeros.push_back(40);
 
-    std::cout<<"Vector: ";
-    for(int i = 0; i< numeros.size(); i++){
+    std::cout<<"Antes: ";
+    for(int i = 0; i < numeros.size(); i++){
         std::cout<<numeros[i]<<" ";
     }
     std::cout<<std::endl;
 
-    std::cout<<"Elemento na posição 0: "<<numeros[0]<<std::endl;
-    std::cout<<"Elemento na posição 2: "<<numeros[2]<<std::endl;
-    std::cout<<"Último elemento: "<<numeros[numeros.size() - 1]<<std::endl;
+    numeros.erase(numeros.begin() + 1);
+
+    std::cout<<"Depois: ";
+    for(int i = 0; i < numeros.size(); i++){
+        std::cout<<numeros[i]<<" ";
+    }
 
     return 0;
 }
