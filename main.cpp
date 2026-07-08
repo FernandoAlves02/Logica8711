@@ -14,66 +14,35 @@ int main(){
     SetConsoleOutputCP(CP_UTF8);
     SetConsoleCP(CP_UTF8);
 
-    system("cls");
     std::vector<int>numeros;
 
-    std::cout<<"Bem vindo ao contador de ocorrências, para começar, crie o seu vetor."<<std::endl;
-    std::cout<<"Escreva um número para adicionar ao vetor ou 0 para parar: "<<std::endl;
-    int valor = 0;
-    while(true){
-        std::cout<<"Digite um número inteiro: ";
-        std::cin>>valor;
+    numeros.push_back(5);
+    numeros.push_back(10);
+    numeros.push_back(15);
+    numeros.push_back(20);
+    numeros.push_back(25);
 
-        if(valor == 0) break;
-        numeros.push_back(valor);
-    }
+    std::vector<int>pares;
+    std::vector<int>impares;
 
-    std::cout<<std::endl;
-    std::cout<<"Contar ocorrências: "<<std::endl;
-    std::cout<<"Vector: ";
+    std::cout<<"Vetor: ";
     for(int i = 0; i < numeros.size(); i++){
-        std::cout<<numeros[i]<<(i == (numeros.size() - 1) ? "." : ", ");
+        std::cout<<numeros[i]<<(i == numeros.size() - 1 ? "." : ", ");
+        (numeros[i] % 2) == 0 ? pares.push_back(numeros[i]) : impares.push_back(numeros[i]);
     }
     std::cout<<std::endl;
-
-    std::vector<int>repetidos;
-
-    for(int i = 0; i < numeros.size(); i++){
-        for(int j = i + 1; j < numeros.size(); j++){
-            if(numeros[i] == numeros[j]){
-                if(!verificarExiste(repetidos, numeros[i]))
-                    repetidos.push_back(numeros[i]);
-                    break;
-            }
-        }
-    }
-
-    std::cout<<std::endl;
-    std::cout<<"Números repetidos: ";
-    for(int i = 0; i < repetidos.size(); i++){
-        std::cout<<repetidos[i]<<(i == (repetidos.size() - 1) ? "." : ", ");
-    }
     std::cout<<std::endl;
 
-    std::vector<int>contador;
-    for(int i = 0; i < repetidos.size(); i++){
-        for(int j = 0; j < numeros.size(); j++){
-            if(repetidos[i] == numeros[j]){
-                if(i == (contador.size() - 1)){
-                    int valor = contador[i];
-                    valor += 1;
-                    contador[i] = valor;
-                }else{
-                    contador.push_back(1);
-                }
-            }
-        }
+    std::cout<<"Pares: ";
+    for(int i = 0; i < pares.size(); i++){
+        std::cout<<pares[i]<<(i == pares.size() - 1 ? "." : ", ");
     }
-    
-
     std::cout<<std::endl;
-    for(int i = 0; i < repetidos.size(); i++){
-        std::cout<<"O número "<<repetidos[i]<<" aparece "<<contador[i]<<" vezes."<<std::endl;
+    std::cout<<std::endl;
+
+    std::cout<<"Ímpares: ";
+    for(int i = 0; i < impares.size(); i++){
+        std::cout<<impares[i]<<(i == impares.size() - 1 ? "." : ", ");
     }
 
     return 0;
