@@ -16,33 +16,21 @@ int main(){
 
     std::vector<int>numeros;
 
-    numeros.push_back(5);
     numeros.push_back(10);
-    numeros.push_back(15);
     numeros.push_back(20);
-    numeros.push_back(25);
+    numeros.push_back(30);
+    numeros.push_back(40);
+    numeros.push_back(50);
 
-    std::vector<int>pares;
-    std::vector<int>impares;
-
-    std::cout<<"Vetor: ";
+    std::cout<<"Original: ";
     for(int i = 0; i < numeros.size(); i++){
         std::cout<<numeros[i]<<(i == numeros.size() - 1 ? "." : ", ");
-        (numeros[i] % 2) == 0 ? pares.push_back(numeros[i]) : impares.push_back(numeros[i]);
     }
-    std::cout<<std::endl;
-    std::cout<<std::endl;
 
-    std::cout<<"Pares: ";
-    for(int i = 0; i < pares.size(); i++){
-        std::cout<<pares[i]<<(i == pares.size() - 1 ? "." : ", ");
-    }
     std::cout<<std::endl;
-    std::cout<<std::endl;
-
-    std::cout<<"Ímpares: ";
-    for(int i = 0; i < impares.size(); i++){
-        std::cout<<impares[i]<<(i == impares.size() - 1 ? "." : ", ");
+    std::cout<<"Invertido: ";
+    for(int i = numeros.size() - 1; i >= 0; i--){
+        std::cout<<numeros[i]<<(i == 0 ? "." : ", ");
     }
 
     return 0;
