@@ -6,10 +6,15 @@ int main(){
     SetConsoleOutputCP(CP_UTF8);
     SetConsoleCP(CP_UTF8);
 
-    std::cout<<"De 1 a 20, os números pares são: ";
+    int numero = 0;
+
+    std::cout<<"Escolha um número para ver a tabuada: ";
+    std::cin>>numero;
     
-    for(int i = 2; i <= 20; i+=2){
-        std::cout<<i<<(i == 20 ? "." : ", ");
+    std::cout<<std::endl;
+
+    for(int i = 0; i <= 10; i++){
+        std::cout<<numero<<" x "<<i<<" = "<<numero * i<<std::endl;
     }
 
     return 0;
