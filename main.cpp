@@ -1,22 +1,16 @@
 #include<iostream>
 #include<windows.h>
 
-int calcularCubo(int num){
-    return static_cast<int>(std::pow(num, 3));
-}
-
 int main(){
 
     SetConsoleOutputCP(CP_UTF8);
     SetConsoleCP(CP_UTF8);
 
-    int numero = 0;
-
-    std::cout<<"Digite um número inteiro: "<<std::endl;
-    std::cin>>numero;
-
-    int cubo = calcularCubo(numero);
-    std::cout<<"O resultado foi: "<<cubo<<"."<<std::endl;
+    std::cout<<"De 1 a 20, os números pares são: ";
+    
+    for(int i = 2; i <= 20; i+=2){
+        std::cout<<i<<(i == 20 ? "." : ", ");
+    }
 
     return 0;
 }
