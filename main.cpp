@@ -6,16 +6,13 @@ int main(){
     SetConsoleOutputCP(CP_UTF8);
     SetConsoleCP(CP_UTF8);
 
-    int numero = 0;
+    const int primeiroTermo = 1; //a1
+    const int ultimoTermo = 100; //an
+    const int n = 100; //quantidade total de números
 
-    std::cout<<"Escolha um número para ver a tabuada: ";
-    std::cin>>numero;
-    
-    std::cout<<std::endl;
+    int soma = ((primeiroTermo + ultimoTermo) * n)/ 2;
 
-    for(int i = 0; i <= 10; i++){
-        std::cout<<numero<<" x "<<i<<" = "<<numero * i<<std::endl;
-    }
+    std::cout<<"A soma de todos os números de 1 a 100 é: "<<soma<<std::endl;
 
     return 0;
 }
